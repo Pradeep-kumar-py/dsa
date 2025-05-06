@@ -7,3 +7,7 @@ process.stdout.write("hello ")
 
 
 process.stdout.write("World")
+process.stdout.write("World")
+process.stdout.write("World")
+process.stdout.write("World")
+process.stdout.write("World")
