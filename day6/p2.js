@@ -21,19 +21,33 @@
 // how can i do this this is a good question 
 // let think how can we can do this how 
 
+// let k = 2
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// let copied;
+
+// for (let i = 0; i < k; i++) {
+//     copied = arr[0]
+//     for (let j = 0; j < arr.length; j++) {
+//         arr[j] = arr[j + 1]
+//     }
+//     console.log(copied)
+//     arr[arr.length - 1] = copied
+// }
+
+// console.log(arr)
+
+
+// better approach 
 let k = 2
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-let copied;
+let temp = new Array(arr.length)
 
-for (let i = 0; i < k; i++) {
-    copied = arr[0]
-    for (let j = 0; j < arr.length; j++) {
-        arr[j] = arr[j + 1]
-    }
-    console.log(copied)
-    arr[arr.length - 1] = copied
+for(let i = 0; i < arr.length; i++){
+    temp[i] = arr[(i+k) % arr.length ]
 }
 
-console.log(arr)
+console.log(temp);
